@@ -25,6 +25,8 @@
             <div class="form-group">
                 <label asp-for="EnrollmentDate" class="control-label"></label>
                 <input asp-for="EnrollmentDate" class="form-control" />
+                @*<input type="datetime-local" id="EnrollmentDate" name="EnrollmentDate" class="form-control" value=""
+                        min="2018-06-07T00:00" max="2018-06-14T00:00" />*@
                 <span asp-validation-for="EnrollmentDate" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -39,5 +41,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
 }
