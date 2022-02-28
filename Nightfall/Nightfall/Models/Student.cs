@@ -13,7 +13,8 @@ namespace Nightfall.Models
         [Required]
         public string FirstMidName { get; set; }
 
-        [Required(ErrorMessage = "Please provide Valid for Email field")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime EnrollmentDate { get; set; }
 
         public ICollection<Enrollment> Enrollments { get; set; }
